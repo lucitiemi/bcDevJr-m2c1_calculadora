@@ -12,7 +12,7 @@ function calc(op) {
    
     document.getElementById("output").value = result;
 
-    var newHistory = "<div>" + num1 + " " + op + " " + num2 + " = " + result + "</div>";
+    var newHistory = "<p>" + num1 + " " + op + " " + num2 + " = " + result + "</p>";
     var history = document.getElementById("history");
 
     history.innerHTML = newHistory + history.innerHTML;
