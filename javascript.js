@@ -4,11 +4,20 @@ function calc(op) {
     var output = 0;
 
     switch(op) {
-        case 'a': var result = num1 + num2; break;
-        case 's': var result = num1 - num2; break;
-        case 'm': var result = num1 * num2; break;
-        case 'd': var result = num1 / num2; break;
+        case '+': var result = num1 + num2; break;
+        case '-': var result = num1 - num2; break;
+        case '*': var result = num1 * num2; break;
+        case '/': var result = num1 / num2; break;
     }
    
     document.getElementById("output").value = result;
+
+    var newHistory = "<div>" + num1 + " " + op + " " + num2 + " = " + result + "</div>";
+    var history = document.getElementById("history");
+
+    history.innerHTML = newHistory + history.innerHTML;
+
+    if (history.children.length > 10) {
+        history.removeChild(history.childNodes[10]);
+    }
 }
