@@ -12,9 +12,16 @@
 
         <div class="calc">
             <h1>Calculadora</h1>
-            <input id="num1" type="number"/>
-            <input id="num2" type="number"/>
-            <button onclick="calc()">Somar</button>
+            <input id="num1" type="number" placeholder="Digite um número"/>
+            <input id="num2" type="number" placeholder="Digite um número"/>
+
+            <div>
+                <button onclick="calc('a')"> + </button>
+                <button onclick="calc('s')"> - </button>
+                <button onclick="calc('m')"> * </button>
+                <button onclick="calc('d')"> / </button>
+            </div>
+            
             <input id="output" type="text" readonly>
         </div>
 
